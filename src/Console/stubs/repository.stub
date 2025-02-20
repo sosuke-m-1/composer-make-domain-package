@@ -13,7 +13,7 @@ class {{ class }}Repository
     }
 
     /**
-     * Make a entity
+     * Get a entity
      *
      * @return {{ class }}Entity
      */

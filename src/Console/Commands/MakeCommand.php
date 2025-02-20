@@ -29,16 +29,26 @@ abstract class MakeCommand extends GeneratorCommand
             : __DIR__ . $stub;
     }
 
-    // /**
-    //  * Get the default namespace for the class.
-    //  *
-    //  * @param  string  $rootNamespace
-    //  * @return string
-    //  */
-    // protected function getDefaultNamespace($rootNamespace)
-    // {
-    //     return is_dir(app_path('Actions')) ? $rootNamespace . '\\Actions' : $rootNamespace;
-    // }
+    /**
+     * Get the desired class name from the input.
+     *
+     * @return string
+     */
+    protected function getNameInput()
+    {
+        $name = trim($this->argument('name'));
+
+        if (Str::endsWith($name, '.php')) {
+            return Str::substr($name, 0, -4);
+        }
+
+        if (Str::endsWith($name, '/')) {
+            $file_name = str_replace('/', '', $name);
+            return $name . $file_name;
+        }
+
+        return $name;
+    }
 
     /**
      * Execute the console command.
@@ -57,8 +67,6 @@ abstract class MakeCommand extends GeneratorCommand
         $name = $this->qualifyClass($this->getNameInput());
 
         $path = $this->getPath($name);
-        // $servicePath = $this->getServicePath($name);
-        // $factoryPath = $this->getFactoryPath($name);
 
         // Next, We will check to see if the class already exists. If it does, we don't want
         // to create the class and overwrite the user's code. So, we will bail out so the
