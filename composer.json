@@ -10,6 +10,7 @@
             "name": "Sosuke Matsushita"
         }
     ],
+    "license": "MIT",
     "require": {},
     "extra": {
         "laravel": {
