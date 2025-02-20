@@ -11,4 +11,14 @@ class {{ class }}Repository
     ){
         $this->{{ class }}Factory = ${{ class }}Factory;
     }
+
+    /**
+     * Make a entity
+     *
+     * @return {{ class }}Entity
+     */
+    public function getEntity(): {{ class }}Entity
+    {
+        return $this->{{ class }}Factory->make();
+    }
 }

@@ -4,6 +4,11 @@ namespace {{ namespace }};
 
 class {{ class }}Factory
 {
+    /**
+     * Make a entity
+     *
+     * @return {{ class }}Entity
+     */
     public function make(): {{ class }}Entity
     {
         return new {{ class }}Entity();

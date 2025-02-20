@@ -12,7 +12,14 @@ class {{ class }}Service
         $this->{{ class }}Repository = ${{ class }}Repository;
     }
 
-    public function handle()
+    /**
+     * Conduct application logic
+     * ex. Transaction
+     *
+     * @return {{ class }}Entity
+     */
+    public function handle(): {{ class }}Entity
     {
+        return $this->{{ class }}Repository->getEntity();
     }
 }

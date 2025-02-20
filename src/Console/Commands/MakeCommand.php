@@ -45,8 +45,6 @@ abstract class MakeCommand extends GeneratorCommand
      */
     public function handle()
     {
-        dump('test');
-
         // First we need to ensure that the given name is not a reserved word within the PHP
         // language and that the class name will actually be valid. If it is not valid we
         // can error now and prevent from polluting the filesystem using invalid files.
