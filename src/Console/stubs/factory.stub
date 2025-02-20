@@ -1,0 +1,11 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ class }}Factory
+{
+    public function make(): {{ class }}Entity
+    {
+        return new {{ class }}Entity();
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "sosuke/make-domain",
+    "autoload": {
+        "psr-4": {
+            "Sosuke\\MakeDomain\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sosuke Matsushita"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sosuke\\MakeDomain\\MakeDomainCommandServiceProvider"
+            ]
+        }
+    }
+}
