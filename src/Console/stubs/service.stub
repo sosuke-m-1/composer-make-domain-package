@@ -4,12 +4,9 @@ namespace {{ namespace }};
 
 class {{ class }}Service
 {
-    private ${{ class }}Repository;
-
     public function __construct(
-        {{ class }}Repository ${{ class }}Repository
+        private {{ class }}Repository ${{ class }}Repository
     ){
-        $this->{{ class }}Repository = ${{ class }}Repository;
     }
 
     /**

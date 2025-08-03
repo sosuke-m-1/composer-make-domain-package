@@ -4,12 +4,9 @@ namespace {{ namespace }};
 
 class {{ class }}Repository
 {
-    private ${{ class }}Factory;
-
     public function __construct(
-        {{ class }}Factory ${{ class }}Factory
+        private {{ class }}Factory ${{ class }}Factory
     ){
-        $this->{{ class }}Factory = ${{ class }}Factory;
     }
 
     /**
